@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ShopMini - mua sắm đơn giản, chọn đồ thật vui." />
+    <title>ShopMini | Chọn đồ thật vui</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="#top" aria-label="ShopMini trang chủ">shop<span>mini</span></a>
+        <nav class="nav" aria-label="Điều hướng chính">
+          <a class="active" href="#top">Trang chủ</a>
+          <a href="#products">Sản phẩm</a>
+          <a href="#about">Về chúng tôi</a>
+        </nav>
+        <button class="cart-button" type="button" aria-label="Xem giỏ hàng">
+          <span aria-hidden="true">🛍</span> Giỏ hàng <b id="cart-count">0</b>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <section class="hero container">
+        <div class="hero-copy">
+          <p class="eyebrow">Bộ sưu tập mới 2026</p>
+          <h1>Những điều nhỏ xinh cho <em>mỗi ngày vui.</em></h1>
+          <p class="hero-text">Từ đồ công nghệ đến phụ kiện thân quen, ShopMini tuyển chọn những món đồ thiết thực với giá thật dễ thương.</p>
+          <a class="primary-button" href="#products">Khám phá ngay <span>→</span></a>
+          <div class="hero-note"><span>✦</span> Miễn phí giao hàng cho đơn từ 500.000đ</div>
+        </div>
+        <div class="hero-art" aria-label="Minh họa mua sắm">
+          <div class="sun"></div>
+          <div class="blob blob-one"></div><div class="blob blob-two"></div>
+          <div class="hero-card card-back">Tươi<br />mới</div>
+          <div class="hero-card card-front"><span>✨</span><strong>Pick<br />your joy</strong><small>SHOPMINI</small></div>
+          <div class="hero-tag">Tối giản<br /><b>mà xinh</b></div>
+        </div>
+      </section>
+
+      <section class="categories container" aria-labelledby="categories-title">
+        <div class="section-heading"><p class="eyebrow">Mua theo sở thích</p><h2 id="categories-title">Bạn đang tìm gì?</h2></div>
+        <div class="category-list">
+          <button class="category selected" data-category="Tất cả"><span>✦</span>Tất cả</button>
+          <button class="category" data-category="Thời trang"><span>◒</span>Thời trang</button>
+          <button class="category" data-category="Điện tử"><span>⌁</span>Điện tử</button>
+          <button class="category" data-category="Gia dụng"><span>♨</span>Gia dụng</button>
+          <button class="category" data-category="Phụ kiện"><span>⌘</span>Phụ kiện</button>
+        </div>
+      </section>
+
+      <section class="products-section" id="products">
+        <div class="container">
+          <div class="section-heading row-heading"><div><p class="eyebrow">Được yêu thích nhất</p><h2>Sản phẩm nổi bật</h2></div><p id="product-total">6 sản phẩm</p></div>
+          <div class="product-grid" id="product-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="about">
+      <div class="container footer-inner"><div><a class="logo" href="#top">shop<span>mini</span></a><p>Chọn đồ thật vui, sống thật đơn giản.</p></div><p>© <span id="year"></span> ShopMini · Bài tập Công nghệ lập trình hiện đại</p></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
