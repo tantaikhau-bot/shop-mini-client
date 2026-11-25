@@ -3,68 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="ShopMini - mua sắm đơn giản, chọn đồ thật vui." />
-    <title>ShopMini | Chọn đồ thật vui</title>
+    <meta name="description" content="LUNORA - thời trang thanh lịch cho phong cách hiện đại." />
+    <title>LUNORA | Thời trang thanh lịch</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container header-inner">
-        <a class="logo" href="#top" aria-label="ShopMini trang chủ">shop<span>mini</span></a>
-        <nav class="nav" aria-label="Điều hướng chính">
-          <a class="active" href="#top">Trang chủ</a>
-          <a href="#products">Sản phẩm</a>
-          <a href="#about">Về chúng tôi</a>
-        </nav>
-        <button class="cart-button" type="button" aria-label="Xem giỏ hàng">
-          <span aria-hidden="true">🛍</span> Giỏ hàng <b id="cart-count">0</b>
-        </button>
-      </div>
-    </header>
+    <div class="announcement">← <span>Giao hàng miễn phí cho đơn từ 1.000.000đ</span><span>BST Thu Đông đã có mặt</span><span>Ưu đãi đến 30% một số sản phẩm</span> →</div>
+    <header class="header"><div class="nav-wrap">
+      <a class="brand" href="#top">LUNORA</a>
+      <nav class="nav"><a class="active" href="#top">Trang chủ</a><a href="#products">Mới về</a><a href="#women">Nữ⌄</a><a href="#men">Nam⌄</a><a href="#collections">Bộ sưu tập⌄</a><a class="sale" href="#products">Sale</a></nav>
+      <div class="header-actions"><label class="search">⌕<input aria-label="Tìm sản phẩm" placeholder="Tìm kiếm sản phẩm..." /></label><button aria-label="Tài khoản">♙</button><button aria-label="Yêu thích">♡</button><button class="bag" aria-label="Giỏ hàng">▣<b id="cart-count">0</b></button></div>
+    </div></header>
 
     <main id="top">
-      <section class="hero container">
-        <div class="hero-copy">
-          <p class="eyebrow">Bộ sưu tập mới 2026</p>
-          <h1>Những điều nhỏ xinh cho <em>mỗi ngày vui.</em></h1>
-          <p class="hero-text">Từ đồ công nghệ đến phụ kiện thân quen, ShopMini tuyển chọn những món đồ thiết thực với giá thật dễ thương.</p>
-          <a class="primary-button" href="#products">Khám phá ngay <span>→</span></a>
-          <div class="hero-note"><span>✦</span> Miễn phí giao hàng cho đơn từ 500.000đ</div>
-        </div>
-        <div class="hero-art" aria-label="Minh họa mua sắm">
-          <div class="sun"></div>
-          <div class="blob blob-one"></div><div class="blob blob-two"></div>
-          <div class="hero-card card-back">Tươi<br />mới</div>
-          <div class="hero-card card-front"><span>✨</span><strong>Pick<br />your joy</strong><small>SHOPMINI</small></div>
-          <div class="hero-tag">Tối giản<br /><b>mà xinh</b></div>
-        </div>
-      </section>
+      <section class="hero"><img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=1500&q=90" alt="Người mẫu mặc blazer trắng" /><div class="hero-copy"><p class="kicker">LUNORA</p><h1>NEW SEASON<br />COLLECTION</h1><p>Thiết kế vượt thời gian, đường nét hiện đại và những món đồ tinh tế cho một mùa mới đầy phong cách.</p><div><a class="dark-btn" href="#products">Mua ngay&nbsp; →</a><a class="outline-btn" href="#collections">Khám phá lookbook</a></div><div class="dots"><b></b><i></i><i></i></div></div></section>
 
-      <section class="categories container" aria-labelledby="categories-title">
-        <div class="section-heading"><p class="eyebrow">Mua theo sở thích</p><h2 id="categories-title">Bạn đang tìm gì?</h2></div>
-        <div class="category-list">
-          <button class="category selected" data-category="Tất cả"><span>✦</span>Tất cả</button>
-          <button class="category" data-category="Thời trang"><span>◒</span>Thời trang</button>
-          <button class="category" data-category="Điện tử"><span>⌁</span>Điện tử</button>
-          <button class="category" data-category="Gia dụng"><span>♨</span>Gia dụng</button>
-          <button class="category" data-category="Phụ kiện"><span>⌘</span>Phụ kiện</button>
-        </div>
-      </section>
+      <section class="category-strip" id="collections"><a id="women" class="category-card" href="#products"><img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=700&q=80" alt="Thời trang nữ"/><span>Women<br /><b>→</b></span></a><a id="men" class="category-card" href="#products"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=700&q=80" alt="Thời trang nam"/><span>Men<br /><b>→</b></span></a><a class="category-card" href="#products"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Phụ kiện thời trang"/><span>Accessories<br /><b>→</b></span></a><a class="category-card" href="#products"><img src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=700&q=80" alt="Hàng mới về"/><span>New Arrivals<br /><b>→</b></span></a></section>
 
-      <section class="products-section" id="products">
-        <div class="container">
-          <div class="section-heading row-heading"><div><p class="eyebrow">Được yêu thích nhất</p><h2>Sản phẩm nổi bật</h2></div><p id="product-total">6 sản phẩm</p></div>
-          <div class="product-grid" id="product-grid"></div>
-        </div>
-      </section>
+      <section class="products wrap" id="products"><div class="section-title"><div><p class="kicker">SẢN PHẨM NỔI BẬT</p><h2>Phong cách dành cho bạn</h2></div><a href="#products">Xem tất cả sản phẩm&nbsp; →</a></div><div class="product-grid" id="product-grid"></div></section>
+
+      <section class="editorial"><img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=1500&q=85" alt="Bộ sưu tập mùa thu"/><div><p class="kicker">NEW COLLECTION</p><h2>The Autumn Edit</h2><p>Những thiết kế kinh điển trên chất liệu giàu cảm xúc, mang sắc màu trầm ấm của mùa thu.</p><a class="dark-btn" href="#products">Khám phá bộ sưu tập&nbsp; →</a></div></section>
+
+      <section class="look wrap"><div class="look-copy"><p class="kicker">TRENDING STYLES</p><h2>Shop the Look</h2><p>Lấy cảm hứng từ những bản phối được tuyển chọn dành riêng cho bạn.</p><a class="dark-btn" href="#products">Mua set đồ này&nbsp; →</a></div><img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=900&q=85" alt="Người mẫu phối đồ thành thị"/><div class="look-items"><h3>The Modern City Look</h3><div><span>Áo khoác Wool Blend<br /><b>2.590.000đ</b></span><button data-add>+</button></div><div><span>Áo len cổ lọ<br /><b>890.000đ</b></span><button data-add>+</button></div><div><span>Quần Tailored<br /><b>1.290.000đ</b></span><button data-add>+</button></div></div></section>
+
+      <section class="benefits"><div>▱<span><b>Giao hàng miễn phí</b>Đơn hàng từ 1.000.000đ</span></div><div>⇄<span><b>Đổi trả dễ dàng</b>Trong vòng 30 ngày</span></div><div>♧<span><b>Thanh toán bảo mật</b>Bảo vệ 100% giao dịch</span></div><div>◇<span><b>Chất lượng tuyển chọn</b>Thiết kế chỉn chu</span></div></section>
+
+      <section class="reviews wrap"><div class="section-title"><div><p class="kicker">KHÁCH HÀNG NÓI GÌ</p><h2>Được yêu thích bởi bạn</h2></div><span>‹　›</span></div><div class="review-grid"><article>“Chất liệu mềm, form áo cực đẹp. Mặc lên rất sang và dễ phối.”<b>★★★★★</b><small>— Minh Anh · Khách hàng đã mua</small></article><article>“Tối giản, hiện đại và rất chỉn chu. LUNORA nhanh chóng thành shop yêu thích của mình.”<b>★★★★★</b><small>— Tuấn Đạt · Khách hàng đã mua</small></article><article>“Thiết kế tinh tế, giao hàng nhanh. Mình thích từng chi tiết nhỏ.”<b>★★★★★</b><small>— Thanh Lam · Khách hàng đã mua</small></article></div></section>
     </main>
-
-    <footer class="site-footer" id="about">
-      <div class="container footer-inner"><div><a class="logo" href="#top">shop<span>mini</span></a><p>Chọn đồ thật vui, sống thật đơn giản.</p></div><p>© <span id="year"></span> ShopMini · Bài tập Công nghệ lập trình hiện đại</p></div>
-    </footer>
+    <footer><div class="footer-top wrap"><div><a class="brand" href="#top">LUNORA</a><p>Thời trang hiện đại cho phong cách sống tinh tế. Những thiết kế bạn sẽ muốn mặc mỗi ngày.</p></div><div><b>Về LUNORA</b><a>Our Story</a><a>Tuyển dụng</a><a>Liên hệ</a></div><div><b>Hỗ trợ khách hàng</b><a>Hướng dẫn mua hàng</a><a>Đổi trả</a><a>Chính sách bảo mật</a></div><div><b>Newsletter</b><p>Nhận thông tin sản phẩm mới và ưu đãi độc quyền.</p><label><input placeholder="Nhập email của bạn"/><button>→</button></label></div></div><div class="footer-bottom wrap">© <span id="year"></span> LUNORA. All Rights Reserved. <span>Vietnamese　|　VND (₫)</span></div></footer>
     <script src="script.js"></script>
   </body>
 </html>
