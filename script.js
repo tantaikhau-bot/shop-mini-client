@@ -9,22 +9,35 @@ const products = [
 
 const formatPrice = (price) => `${price.toLocaleString("vi-VN")}đ`;
 const lowStockProducts = products.filter((product) => product.stock >= 1 && product.stock <= 5);
-let cartCount = 0;
+const storedCart = JSON.parse(localStorage.getItem("lunora-cart") || "[]");
+let cartCount = storedCart.reduce((total, item) => total + item.quantity, 0);
 
 function productCard(product) {
   const outOfStock = product.stock === 0;
-  return `<article class="product-card"><div class="product-image"><img src="${product.image}" alt="${product.name}" loading="lazy" />${product.badge ? `<span class="badge">${product.badge}</span>` : ""}${outOfStock ? '<span class="stock-badge sold-out">Hết hàng</span>' : product.stock <= 5 ? `<span class="stock-badge">Còn ${product.stock} sản phẩm</span>` : ""}<button class="heart" aria-label="Thêm ${product.name} vào yêu thích">♡</button></div><h3>${product.name}</h3><p>${formatPrice(product.price)}</p>${outOfStock ? '<button class="buy-button" disabled>Hết hàng</button>' : `<button class="buy-button" data-add="${product.id}">Thêm vào giỏ</button>`}</article>`;
+  return `<article class="product-card"><div class="product-image"><img src="${product.image}" alt="${product.name}" loading="lazy" />${product.badge ? `<span class="badge">${product.badge}</span>` : ""}${outOfStock ? '<span class="stock-badge sold-out">Hết hàng</span>' : product.stock <= 5 ? `<span class="stock-badge">Còn ${product.stock} sản phẩm</span>` : ""}<button class="heart" data-favorite="${product.id}" aria-label="Thêm ${product.name} vào yêu thích">♡</button></div><h3>${product.name}</h3><p>${formatPrice(product.price)}</p>${outOfStock ? '<button class="buy-button" disabled>Hết hàng</button>' : `<button class="buy-button" data-add="${product.id}">Thêm vào giỏ</button>`}</article>`;
 }
 
 document.querySelector("#product-grid").innerHTML = products.map(productCard).join("");
 document.querySelector("#low-stock-grid").innerHTML = lowStockProducts.map(productCard).join("");
 document.addEventListener("click", (event) => {
   if (event.target.matches("[data-add]")) {
+    const productId = Number(event.target.dataset.add);
+    const savedCart = JSON.parse(localStorage.getItem("lunora-cart") || "[]");
+    const current = savedCart.find((item) => item.id === productId);
+    current ? current.quantity += 1 : savedCart.push({ id: productId, quantity: 1 });
+    localStorage.setItem("lunora-cart", JSON.stringify(savedCart));
     cartCount += 1;
     document.querySelector("#cart-count").textContent = cartCount;
     event.target.textContent = "Đã thêm ✓";
     setTimeout(() => { event.target.textContent = "Thêm vào giỏ"; }, 800);
   }
-  if (event.target.matches(".heart")) event.target.textContent = event.target.textContent === "♡" ? "♥" : "♡";
+  if (event.target.matches(".heart")) {
+    const productId = Number(event.target.dataset.favorite);
+    const savedFavorites = JSON.parse(localStorage.getItem("lunora-favorites") || "[]");
+    const index = savedFavorites.indexOf(productId);
+    index >= 0 ? savedFavorites.splice(index, 1) : savedFavorites.push(productId);
+    localStorage.setItem("lunora-favorites", JSON.stringify(savedFavorites));
+    event.target.textContent = event.target.textContent === "♡" ? "♥" : "♡";
+  }
 });
 document.querySelector("#year").textContent = new Date().getFullYear();
