@@ -1,4 +1,4 @@
-import { filterProducts, formatPrice } from "./utils.js";
+const { filterProducts, formatPrice } = window.ShopUtils;
 
 const products = [
   { id: 1, name: "Silk Relaxed Shirt", price: 890000, category: "Nữ", stock: 12, badge: "Mới", image: "https://images.unsplash.com/photo-1485968579580-b6d095142e6e?auto=format&fit=crop&w=600&q=85" },
