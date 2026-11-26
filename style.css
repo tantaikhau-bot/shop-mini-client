@@ -42,15 +42,16 @@ button{font:inherit;cursor:pointer}
 .section-title h2,.look h2,.reviews h2{font:500 28px 'Playfair Display',serif;margin:0}
 .section-title>a{font-size:11px;border-bottom:1px solid #222;padding-bottom:3px}
 .product-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:17px}
-.product-card{min-width:0}
-.product-image{height:250px;position:relative;overflow:hidden;background:#ece9e5}
+.product-card{min-width:0;background:#fff;border:1px solid #e7e1da;border-radius:14px;padding:9px 9px 13px;box-shadow:0 5px 18px rgba(35,28,22,.045);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.product-card:hover{transform:translateY(-6px);border-color:#cfc5ba;box-shadow:0 15px 30px rgba(35,28,22,.12)}
+.product-image{height:250px;position:relative;overflow:hidden;background:#ece9e5;border-radius:9px}
 .product-image img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
 .product-card:hover img{transform:scale(1.04)}
 .badge{position:absolute;top:10px;left:10px;background:#fff;padding:5px 8px;font-size:10px}
 .heart{position:absolute;right:10px;bottom:9px;border:0;background:#fff;border-radius:50%;width:28px;height:28px;font-size:17px}
-.product-card h3{margin:9px 0 5px;font-weight:500;font-size:12px}
-.product-card p{margin:0;font-weight:600;font-size:11px}
-.stock-badge{position:absolute;top:10px;right:10px;background:#fff3e8;color:#9b4115;padding:5px 8px;font-size:9px;font-weight:600}.stock-badge.sold-out{background:#fbe4e4;color:#a32121}.buy-button{margin-top:10px;width:100%;padding:9px;border:1px solid #181818;background:#181818;color:#fff;font-size:10px;transition:background .2s}.buy-button:hover{background:#555}.buy-button:disabled{background:#bdbdbd;border-color:#bdbdbd;cursor:not-allowed}.low-stock{padding-top:48px;padding-bottom:48px;background:#fcfaf7}
+.product-card h3{margin:13px 5px 6px;font-weight:500;font-size:13px}
+.product-card p{margin:0 5px;font-weight:600;font-size:11px}
+.stock-badge{position:absolute;top:10px;right:10px;background:#fff3e8;color:#9b4115;padding:5px 8px;border-radius:4px;font-size:9px;font-weight:600}.stock-badge.sold-out{background:#fbe4e4;color:#a32121}.buy-button{margin:12px 5px 0;width:calc(100% - 10px);padding:10px;border:1px solid #181818;border-radius:7px;background:#181818;color:#fff;font-size:10px;transition:background .2s,transform .2s}.buy-button:hover{background:#555;transform:translateY(-1px)}.buy-button:disabled{background:#bdbdbd;border-color:#bdbdbd;cursor:not-allowed}.low-stock{padding-top:48px;padding-bottom:48px;background:#fcfaf7}
 .home-filters{padding:17px 0 25px;border-top:1px solid #e8e3dc;border-bottom:1px solid #e8e3dc;margin-bottom:26px}.home-filters .filter-bar{margin:0 0 15px;padding:0;border:0}.filter-controls{display:flex;gap:11px;flex-wrap:wrap}.filter-controls label{border:1px solid #ddd6cf;background:white;display:flex;align-items:center;height:38px;padding:0 11px;gap:9px}.filter-controls span{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#777}.filter-controls input,.filter-controls select{border:0;outline:0;font:11px 'DM Sans';color:#242424;background:white;min-width:120px}.filter-controls select{cursor:pointer}
 .editorial{height:292px;background:#e9dfd4;position:relative;overflow:hidden}
 .editorial>img{width:56%;height:100%;object-fit:cover;object-position:center 42%}
