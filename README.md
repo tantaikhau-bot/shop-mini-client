@@ -1,14 +1,22 @@
-# ShopMini
+# ShopMini / LUNORA
 
-Trang web tĩnh giới thiệu cửa hàng ShopMini, xây dựng bằng HTML, CSS và JavaScript thuần.
+Website thời trang tĩnh, xây dựng bằng HTML, CSS và JavaScript thuần. Dự án cũng có thư viện TypeScript từ Lab 2 để chuẩn bị tích hợp React ở các buổi sau.
 
-## Chạy dự án
+## Xem website
 
-Mở file `index.html` bằng trình duyệt, hoặc dùng tiện ích **Live Server** trong Visual Studio Code.
+Mở `index.html` bằng trình duyệt hoặc tiện ích **Live Server** trong Visual Studio Code.
 
-## Chức năng
+## Kiểm tra bài Lab 2
 
-- Giao diện đáp ứng cho máy tính và điện thoại
-- Lọc sản phẩm theo danh mục
-- Hiển thị trạng thái hết hàng
-- Thêm sản phẩm vào giỏ hàng
+Node.js 22.18+ có thể chạy trực tiếp các file TypeScript:
+
+```powershell
+node playground/es6.ts
+node playground/test-cart.ts
+```
+
+Các hàm TypeScript nằm trong `src/utils/`:
+
+- `format.ts`: định dạng tiền Việt Nam.
+- `product.ts`: lọc, sắp xếp, nhóm và tìm sản phẩm theo khoảng giá.
+- `cart.ts`: thêm, xóa, đổi số lượng, đếm và tính tổng giỏ hàng mà không làm thay đổi dữ liệu cũ.

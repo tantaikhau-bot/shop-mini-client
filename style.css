@@ -50,6 +50,7 @@ button{font:inherit;cursor:pointer}
 .heart{position:absolute;right:10px;bottom:9px;border:0;background:#fff;border-radius:50%;width:28px;height:28px;font-size:17px}
 .product-card h3{margin:9px 0 5px;font-weight:500;font-size:12px}
 .product-card p{margin:0;font-weight:600;font-size:11px}
+.stock-badge{position:absolute;top:10px;right:10px;background:#fff3e8;color:#9b4115;padding:5px 8px;font-size:9px;font-weight:600}.stock-badge.sold-out{background:#fbe4e4;color:#a32121}.buy-button{margin-top:10px;width:100%;padding:9px;border:1px solid #181818;background:#181818;color:#fff;font-size:10px;transition:background .2s}.buy-button:hover{background:#555}.buy-button:disabled{background:#bdbdbd;border-color:#bdbdbd;cursor:not-allowed}.low-stock{padding-top:48px;padding-bottom:48px;background:#fcfaf7}
 .editorial{height:292px;background:#e9dfd4;position:relative;overflow:hidden}
 .editorial>img{width:56%;height:100%;object-fit:cover;object-position:center 42%}
 .editorial>div{position:absolute;top:66px;left:61%;width:380px}
