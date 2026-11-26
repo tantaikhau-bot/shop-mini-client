@@ -10,7 +10,8 @@ const products = [
 ];
 
 const lowStockProducts = products.filter((product) => product.stock >= 1 && product.stock <= 5);
-const storedCart = JSON.parse(localStorage.getItem("lunora-cart") || "[]");
+const CART_STORAGE_KEY = "lunora-cart-v2";
+const storedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || "[]");
 let cartCount = storedCart.reduce((total, item) => total + item.quantity, 0);
 let activeCategory = "";
 
@@ -36,10 +37,10 @@ document.querySelector("#home-sort").addEventListener("change", renderProducts);
 document.addEventListener("click", (event) => {
   if (event.target.matches("[data-add]")) {
     const productId = Number(event.target.dataset.add);
-    const savedCart = JSON.parse(localStorage.getItem("lunora-cart") || "[]");
+    const savedCart = JSON.parse(localStorage.getItem(CART_STORAGE_KEY) || "[]");
     const current = savedCart.find((item) => item.id === productId);
     current ? current.quantity += 1 : savedCart.push({ id: productId, quantity: 1 });
-    localStorage.setItem("lunora-cart", JSON.stringify(savedCart));
+    localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(savedCart));
     cartCount += 1;
     document.querySelector("#cart-count").textContent = cartCount;
     event.target.textContent = "Đã thêm ✓";
